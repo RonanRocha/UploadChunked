@@ -1,0 +1,198 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\0a1cf6af-6b25-4fd5-b975-386dac050096\**" />
+    <Content Remove="wwwroot\0a1cf6af-6b25-4fd5-b975-386dac050096\**" />
+    <EmbeddedResource Remove="wwwroot\0a1cf6af-6b25-4fd5-b975-386dac050096\**" />
+    <None Remove="wwwroot\0a1cf6af-6b25-4fd5-b975-386dac050096\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="node_modules\%40swc\helpers\.vscode\settings.json" />
+    <Content Include="node_modules\%40swc\helpers\package.json" />
+    <Content Include="node_modules\.package-lock.json" />
+    <Content Include="node_modules\dropzone\composer.json" />
+    <Content Include="node_modules\dropzone\dist\basic.css" />
+    <Content Include="node_modules\dropzone\dist\dropzone.css" />
+    <Content Include="node_modules\dropzone\package.json" />
+    <Content Include="node_modules\dropzone\src\preview-template.html" />
+    <Content Include="node_modules\just-extend\package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="node_modules\%40swc\helpers\lib\index.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_apply_decorated_descriptor.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_array_without_holes.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_array_with_holes.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_assert_this_initialized.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_async_generator.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_async_generator_delegate.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_async_iterator.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_async_to_generator.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_await_async_generator.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_await_value.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_call_check.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_name_tdz_error.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_private_field_get.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_private_field_loose_base.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_private_field_set.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_private_method_get.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_private_method_set.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_static_private_field_spec_get.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_class_static_private_field_spec_set.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_construct.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_create_class.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_create_super.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_decorate.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_defaults.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_define_enumerable_properties.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_define_property.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_extends.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_get.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_get_prototype_of.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_inherits.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_inherits_loose.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_initializer_define_property.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_initializer_warning_helper.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_instanceof.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_interop_require_default.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_interop_require_wildcard.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_is_native_function.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_is_native_reflect_construct.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_iterable_to_array.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_iterable_to_array_limit.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_iterable_to_array_limit_loose.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_jsx.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_new_arrow_check.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_non_iterable_rest.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_non_iterable_spread.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_object_spread.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_object_without_properties.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_object_without_properties_loose.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_possible_constructor_return.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_read_only_error.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_set.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_set_prototype_of.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_skip_first_generator_next.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_sliced_to_array.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_sliced_to_array_loose.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_super_prop_base.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_tagged_template_literal.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_tagged_template_literal_loose.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_throw.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_to_array.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_to_consumable_array.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_to_primitive.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_to_property_key.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_type_of.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_wrap_async_generator.js" />
+    <None Include="node_modules\%40swc\helpers\lib\_wrap_native_super.js" />
+    <None Include="node_modules\%40swc\helpers\scripts\gen.sh" />
+    <None Include="node_modules\%40swc\helpers\scripts\generator.sh" />
+    <None Include="node_modules\%40swc\helpers\src\index.js" />
+    <None Include="node_modules\%40swc\helpers\src\_apply_decorated_descriptor.js" />
+    <None Include="node_modules\%40swc\helpers\src\_array_without_holes.js" />
+    <None Include="node_modules\%40swc\helpers\src\_array_with_holes.js" />
+    <None Include="node_modules\%40swc\helpers\src\_assert_this_initialized.js" />
+    <None Include="node_modules\%40swc\helpers\src\_async_generator.js" />
+    <None Include="node_modules\%40swc\helpers\src\_async_generator_delegate.js" />
+    <None Include="node_modules\%40swc\helpers\src\_async_iterator.js" />
+    <None Include="node_modules\%40swc\helpers\src\_async_to_generator.js" />
+    <None Include="node_modules\%40swc\helpers\src\_await_async_generator.js" />
+    <None Include="node_modules\%40swc\helpers\src\_await_value.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_call_check.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_name_tdz_error.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_private_field_get.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_private_field_loose_base.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_private_field_set.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_private_method_get.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_private_method_set.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_static_private_field_spec_get.js" />
+    <None Include="node_modules\%40swc\helpers\src\_class_static_private_field_spec_set.js" />
+    <None Include="node_modules\%40swc\helpers\src\_construct.js" />
+    <None Include="node_modules\%40swc\helpers\src\_create_class.js" />
+    <None Include="node_modules\%40swc\helpers\src\_create_super.js" />
+    <None Include="node_modules\%40swc\helpers\src\_decorate.js" />
+    <None Include="node_modules\%40swc\helpers\src\_defaults.js" />
+    <None Include="node_modules\%40swc\helpers\src\_define_enumerable_properties.js" />
+    <None Include="node_modules\%40swc\helpers\src\_define_property.js" />
+    <None Include="node_modules\%40swc\helpers\src\_extends.js" />
+    <None Include="node_modules\%40swc\helpers\src\_get.js" />
+    <None Include="node_modules\%40swc\helpers\src\_get_prototype_of.js" />
+    <None Include="node_modules\%40swc\helpers\src\_inherits.js" />
+    <None Include="node_modules\%40swc\helpers\src\_inherits_loose.js" />
+    <None Include="node_modules\%40swc\helpers\src\_initializer_define_property.js" />
+    <None Include="node_modules\%40swc\helpers\src\_initializer_warning_helper.js" />
+    <None Include="node_modules\%40swc\helpers\src\_instanceof.js" />
+    <None Include="node_modules\%40swc\helpers\src\_interop_require_default.js" />
+    <None Include="node_modules\%40swc\helpers\src\_interop_require_wildcard.js" />
+    <None Include="node_modules\%40swc\helpers\src\_is_native_function.js" />
+    <None Include="node_modules\%40swc\helpers\src\_is_native_reflect_construct.js" />
+    <None Include="node_modules\%40swc\helpers\src\_iterable_to_array.js" />
+    <None Include="node_modules\%40swc\helpers\src\_iterable_to_array_limit.js" />
+    <None Include="node_modules\%40swc\helpers\src\_iterable_to_array_limit_loose.js" />
+    <None Include="node_modules\%40swc\helpers\src\_jsx.js" />
+    <None Include="node_modules\%40swc\helpers\src\_new_arrow_check.js" />
+    <None Include="node_modules\%40swc\helpers\src\_non_iterable_rest.js" />
+    <None Include="node_modules\%40swc\helpers\src\_non_iterable_spread.js" />
+    <None Include="node_modules\%40swc\helpers\src\_object_spread.js" />
+    <None Include="node_modules\%40swc\helpers\src\_object_without_properties.js" />
+    <None Include="node_modules\%40swc\helpers\src\_object_without_properties_loose.js" />
+    <None Include="node_modules\%40swc\helpers\src\_possible_constructor_return.js" />
+    <None Include="node_modules\%40swc\helpers\src\_read_only_error.js" />
+    <None Include="node_modules\%40swc\helpers\src\_set.js" />
+    <None Include="node_modules\%40swc\helpers\src\_set_prototype_of.js" />
+    <None Include="node_modules\%40swc\helpers\src\_skip_first_generator_next.js" />
+    <None Include="node_modules\%40swc\helpers\src\_sliced_to_array.js" />
+    <None Include="node_modules\%40swc\helpers\src\_sliced_to_array_loose.js" />
+    <None Include="node_modules\%40swc\helpers\src\_super_prop_base.js" />
+    <None Include="node_modules\%40swc\helpers\src\_tagged_template_literal.js" />
+    <None Include="node_modules\%40swc\helpers\src\_tagged_template_literal_loose.js" />
+    <None Include="node_modules\%40swc\helpers\src\_throw.js" />
+    <None Include="node_modules\%40swc\helpers\src\_to_array.js" />
+    <None Include="node_modules\%40swc\helpers\src\_to_consumable_array.js" />
+    <None Include="node_modules\%40swc\helpers\src\_to_primitive.js" />
+    <None Include="node_modules\%40swc\helpers\src\_to_property_key.js" />
+    <None Include="node_modules\%40swc\helpers\src\_type_of.js" />
+    <None Include="node_modules\%40swc\helpers\src\_wrap_async_generator.js" />
+    <None Include="node_modules\%40swc\helpers\src\_wrap_native_super.js" />
+    <None Include="node_modules\dropzone\CHANGELOG.md" />
+    <None Include="node_modules\dropzone\CODE_OF_CONDUCT.md" />
+    <None Include="node_modules\dropzone\dist\basic.css.map" />
+    <None Include="node_modules\dropzone\dist\dropzone-min.js" />
+    <None Include="node_modules\dropzone\dist\dropzone-min.js.map" />
+    <None Include="node_modules\dropzone\dist\dropzone.css.map" />
+    <None Include="node_modules\dropzone\dist\dropzone.js" />
+    <None Include="node_modules\dropzone\dist\dropzone.js.map" />
+    <None Include="node_modules\dropzone\dist\dropzone.mjs" />
+    <None Include="node_modules\dropzone\dist\dropzone.mjs.map" />
+    <None Include="node_modules\dropzone\LICENSE" />
+    <None Include="node_modules\dropzone\README.md" />
+    <None Include="node_modules\dropzone\src\basic.scss" />
+    <None Include="node_modules\dropzone\src\dropzone.js" />
+    <None Include="node_modules\dropzone\src\dropzone.scss" />
+    <None Include="node_modules\dropzone\src\emitter.js" />
+    <None Include="node_modules\dropzone\src\options.js" />
+    <None Include="node_modules\just-extend\index.esm.js" />
+    <None Include="node_modules\just-extend\index.js" />
+    <None Include="node_modules\just-extend\LICENSE" />
+    <None Include="node_modules\just-extend\README.md" />
+    <None Include="node_modules\just-extend\rollup.config.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\just-extend\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\just-extend\index.tests.ts" />
+  </ItemGroup>
+
+</Project>
