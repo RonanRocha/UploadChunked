@@ -35,80 +35,80 @@ public class HomeController : Controller
     }
 
 
-    [HttpPost]
-    public async  Task<IActionResult> Upload([FromForm] ChunkFileViewModel fileChunk)
-    {
-        try
-        {
-            var chunkNumber = fileChunk.ChunkNumber + 1;
-            var totalChunks = fileChunk.TotalChunks;
-            var fileId = fileChunk.FileId;
+    //[HttpPost]
+    //public async  Task<IActionResult> Upload([FromForm] ChunkFileViewModel fileChunk)
+    //{
+    //    try
+    //    {
+    //        var chunkNumber = fileChunk.ChunkNumber + 1;
+    //        var totalChunks = fileChunk.TotalChunks;
+    //        var fileId = fileChunk.FileId;
 
 
-            var uploadPath = Path.Combine(_environment.WebRootPath, "Uploads");
+    //        var uploadPath = Path.Combine(_environment.WebRootPath, "Uploads");
 
-            if (!Directory.Exists(uploadPath))
-                Directory.CreateDirectory(uploadPath);
+    //        if (!Directory.Exists(uploadPath))
+    //            Directory.CreateDirectory(uploadPath);
 
-            var fileTempPath = Path.Combine(_environment.WebRootPath, Path.GetFileNameWithoutExtension(fileId));
+    //        var fileTempPath = Path.Combine(_environment.WebRootPath, Path.GetFileNameWithoutExtension(fileId));
 
-            if (!Directory.Exists(fileTempPath))
-                Directory.CreateDirectory(fileTempPath);
+    //        if (!Directory.Exists(fileTempPath))
+    //            Directory.CreateDirectory(fileTempPath);
 
-            var chunkFilePath = Path.Combine(fileTempPath, $"{chunkNumber}.part");
+    //        var chunkFilePath = Path.Combine(fileTempPath, $"{chunkNumber}.part");
 
-            var file = HttpContext.Request.Form.Files[0];
+    //        var file = HttpContext.Request.Form.Files[0];
 
-            using FileStream fs = new FileStream(chunkFilePath, FileMode.Create, FileAccess.ReadWrite);
+    //        using FileStream fs = new FileStream(chunkFilePath, FileMode.Create, FileAccess.ReadWrite);
 
-            await file.CopyToAsync(fs);
+    //        await file.CopyToAsync(fs);
 
-            fs.Close();
+    //        fs.Close();
 
 
-            if (chunkNumber == totalChunks)
-            {
-                // Combine all chunks to create the final file
-                var extension = Path.GetExtension(file.FileName);
+    //        if (chunkNumber == totalChunks)
+    //        {
+    //            // Combine all chunks to create the final file
+    //            var extension = Path.GetExtension(file.FileName);
 
-                CombineChunks(uploadPath, fileId, totalChunks, extension);
+    //            CombineChunks(uploadPath, fileId, totalChunks, extension);
    
-            }
+    //        }
 
-            return Ok("Chunk uploaded successfully.");
-        }
-        catch (Exception ex)
-        {
+    //        return Ok("Chunk uploaded successfully.");
+    //    }
+    //    catch (Exception ex)
+    //    {
            
             
-            return BadRequest(ex.Message);
-        }
-    }
+    //        return BadRequest(ex.Message);
+    //    }
+    //}
 
 
-    private void CombineChunks(string uploadPath, string fileId, int totalChunks, string extension)
-    {
-        var finalFilePath = Path.Combine(uploadPath, fileId + extension);
-        using var finalStream = System.IO.File.Create(finalFilePath);
+    //private void CombineChunks(string uploadPath, string fileId, int totalChunks, string extension)
+    //{
+    //    var finalFilePath = Path.Combine(uploadPath, fileId + extension);
+    //    using var finalStream = System.IO.File.Create(finalFilePath);
         
-            for (int i = 1; i <= totalChunks; i++)
-            {
+    //        for (int i = 1; i <= totalChunks; i++)
+    //        {
 
-            if (i == 223)
-            {
-                Console.WriteLine("asdas");
-            }
+    //        if (i == 223)
+    //        {
+    //            Console.WriteLine("asdas");
+    //        }
 
-                var chunkFilePath = Path.Combine("wwwroot/" + fileId, $"{i}.part");
+    //            var chunkFilePath = Path.Combine("wwwroot/" + fileId, $"{i}.part");
 
-                using var chunkStream = System.IO.File.OpenRead(chunkFilePath);
+    //            using var chunkStream = System.IO.File.OpenRead(chunkFilePath);
                 
-                chunkStream.CopyTo(finalStream);
+    //            chunkStream.CopyTo(finalStream);
                     
-            }
+    //        }
 
-            Directory.Delete(Path.Combine("wwwroot/", fileId), true);
+    //        Directory.Delete(Path.Combine("wwwroot/", fileId), true);
         
-    }
+    //}
 
 }

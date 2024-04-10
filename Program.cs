@@ -1,9 +1,18 @@
 using Microsoft.Extensions.FileProviders;
+using UploadChunked.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSignalR(o =>
+{
+    o.MaximumReceiveMessageSize = 20 * 1024 * 1024;
+    o.StreamBufferCapacity = 1000 * 1024 * 1024;
+    o.EnableDetailedErrors = true;
+});
+
+builder.Services.AddSingleton(new Dictionary<string,List<ChunkViewModelSignalR>>());
 
 var app = builder.Build();
 
@@ -24,6 +33,9 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 app.UseRouting();
+
+
+app.MapHub<UploadFileHub>("home/upload");
 
 app.UseAuthorization();
 

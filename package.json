@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@microsoft/signalr": "^8.0.0",
     "dropzone": "^6.0.0-beta.2"
   }
 }
